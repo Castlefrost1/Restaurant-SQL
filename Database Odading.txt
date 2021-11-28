@@ -1,0 +1,45 @@
+database : Resto Odading
+
+tabel : Customer, Menu, Pegawai, Pesanan, Bill, Payment
+
+Customer :
+id_Customer int primary key auto_increment
+Nama_Customer varchar(50)
+
+Menu :
+id_Menu int primary key auto_increment
+Nama_Menu varchar(50)
+Stock int
+Bahan varchar(50)
+Harga int
+
+Pegawai :
+id_Pegawai int primary key auto_increment
+Nama_Pegawai varchar(50)
+Gaji int
+Jabatan varchar(20)
+Status_Pegawai varchar(50)
+Alamat varchar(100)
+Tgl_Lahir date
+
+Pesanan :
+id_Pesanan int primary key auto_increment
+Nama_Customer varchar(50)
+No_Meja int
+id_Menu int
+Jumlah int
+Total_Harga int
+Tgl_Pesanan date
+Status_pesanan varchar(50)
+
+Bill :
+id_Bill int primary key auto_increment
+Nama_Customer varchar(50)
+Cash int
+No_Creditcard int
+Waktu datetime
+Total_Harga int
+
+Payment :
+id_Payment int primary key auto_increment
+id_Bill int
